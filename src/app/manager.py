@@ -1,11 +1,11 @@
-from models import JobApplication
+from src.models import JobApplication
 import json
 
 def read_file(path: str):
     try:
         with open(path, "r") as file:
             new_job_list=[]
-            data=file.load()
+            data=json.load(file)
             id=0
             name=""
             email_contact=""
@@ -24,3 +24,7 @@ def read_file(path: str):
         print (f"Error occurred: {e}")
     finally:
         print("Read File Finish")
+
+data_path="data\dummy.json"
+new_job_list=read_file(data_path)
+print(new_job_list)
