@@ -1,10 +1,10 @@
 class JobApplication:
-    def __init__(self, id:int, name:str, email_contant:str, description:str, requerments:list):
+    def __init__(self, id:int, name:str, email_contact:str, description:str, requirements:list):
         self.id=id
         self.name=name
-        self.email_contant=email_contant
+        self.email_contact=email_contact
         self.description=description
-        self.requerments=requerments
+        self.requirements=requirements
     
     def addRequerment(self,new_requerment):
         self.requerment.append(new_requerment)
