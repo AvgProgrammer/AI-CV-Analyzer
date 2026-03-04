@@ -19,3 +19,6 @@ build/
 # IDE
 .vscode/
 .idea/
+
+#data
+data/
