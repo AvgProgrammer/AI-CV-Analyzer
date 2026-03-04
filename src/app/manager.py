@@ -1,4 +1,4 @@
-from src.models import JobApplication
+from src.models.job_application import JobApplication
 import json
 
 def read_file(path: str):
@@ -11,6 +11,7 @@ def read_file(path: str):
             email_contact=""
             description=""
             requirements=[]
+
             for item in data:
                 id=item["id"]
                 name=item["name"]
@@ -25,6 +26,6 @@ def read_file(path: str):
     finally:
         print("Read File Finish")
 
-data_path="data\dummy.json"
+data_path="data/dummy.json"
 new_job_list=read_file(data_path)
 print(new_job_list)
